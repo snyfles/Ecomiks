@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ecomiks1.Models.Eventos>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.eventoNome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.eventoDescricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.eventoData)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.eventoNome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.eventoDescricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.eventoData)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.eventoID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.eventoID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.eventoID })
+        </td>
+    </tr>
+}
+
+</table>

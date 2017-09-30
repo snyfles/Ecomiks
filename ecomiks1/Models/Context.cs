@@ -25,5 +25,7 @@ namespace ecomiks1.Models
         }
 
         public System.Data.Entity.DbSet<ecomiks1.Models.Video> Videos { get; set; }
+
+        public System.Data.Entity.DbSet<ecomiks1.Models.Eventos> Eventos { get; set; }
     }
 }

@@ -1,0 +1,42 @@
+﻿@model ecomiks1.Models.Eventos
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Eventos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.eventoNome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eventoNome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eventoDescricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eventoDescricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eventoData)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eventoData)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.eventoID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

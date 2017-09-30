@@ -127,6 +127,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\EventosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PerfilsController.cs" />
     <Compile Include="Controllers\PessoasController.cs" />
@@ -155,8 +156,13 @@
     <Compile Include="Migrations\201709271714100_video.Designer.cs">
       <DependentUpon>201709271714100_video.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709300710007_evento.cs" />
+    <Compile Include="Migrations\201709300710007_evento.Designer.cs">
+      <DependentUpon>201709300710007_evento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context.cs" />
+    <Compile Include="Models\Eventos.cs" />
     <Compile Include="Models\Perfil.cs" />
     <Compile Include="Models\Pessoa.cs" />
     <Compile Include="Models\Video.cs" />
@@ -220,6 +226,11 @@
     <Content Include="Views\Shared\_LayoutUser.cshtml" />
     <Content Include="Views\Publico\AcessoNegado.cshtml" />
     <Content Include="Views\Videos\Ranking.cshtml" />
+    <Content Include="Views\Eventos\Create.cshtml" />
+    <Content Include="Views\Eventos\Delete.cshtml" />
+    <Content Include="Views\Eventos\Details.cshtml" />
+    <Content Include="Views\Eventos\Edit.cshtml" />
+    <Content Include="Views\Eventos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -247,6 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709271714100_video.resx">
       <DependentUpon>201709271714100_video.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709300710007_evento.resx">
+      <DependentUpon>201709300710007_evento.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
