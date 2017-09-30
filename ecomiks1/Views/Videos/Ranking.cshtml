@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ecomiks1.Models.Video>
+@{
+    ViewBag.Title = "Ranking";
+}
+
+<h2>Ranking</h2>
+@foreach (var item in Model)
+{
+    <div class="row linhaunderline" onmouseover="javascript:this.style.backgroundColor='#e2e2e2'" onmouseout="javascript:this.style.backgroundColor=''">
+        <div class="col-md-8">
+            @Html.DisplayFor(modelItem => item.videoNome)
+        </div><br />
+        <iframe width="900" height="500" src="@Html.DisplayFor(modelItem => item.videoUrl)" frameborder="0" allowfullscreen></iframe>
+        <br />
+        <div class="col-md-2">
+            @Html.DisplayFor(modelItem => item.videoDescricao)
+        </div>
+        
+            <iframe width="640" height="300" src="" frameborder="0" allowfullscreen>
+
+            </iframe>
+            
+            
+        </div>
+  
+}
+

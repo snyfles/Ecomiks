@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+    ViewBag.Title = "Acesso Negado";
+}
+<div class="form-horizontal">
+    <br />
+    <h2 class="text-center">Acesso Negado</h2>
+    @*<h3 class="text-center">@Html.ActionLink("Ir para a tela de Login", "Logar", "Publico")</h3>*@
+</div>
+Alterar o _Layout.cshtml em Views/Shared
+Para permitir acesso apenas a quem estiver Logado
+@{
+    ecomiks1.Models.Pessoa pessoa = ecomiks1.Repositories.Funcoes.GetUsuario();
+    if (pessoa != null)
+    {
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("Estados", "Index", "Estados")</li>
+                <li>@Html.ActionLink("Cidades", "Index", "Cidades")</li>
+                <li>@Html.ActionLink("Clientes", "Index", "Clientes")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            </ul>
+        </div>
+    }
+    else
+    {
+        <script type="text/javascript">
+ window.location.href = "@Url.Action("AcessoNegado","Publico")";
+        </script>
+    }
+}

@@ -1,0 +1,64 @@
+﻿@model ecomiks1.Models.Video
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Video</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.videoNome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.videoNome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.videoUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.videoUrl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.videoDescricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.videoDescricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.videoCategoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.videoCategoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.videoAvaliacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.videoAvaliacao)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

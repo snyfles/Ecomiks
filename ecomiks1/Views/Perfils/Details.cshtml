@@ -1,0 +1,26 @@
+﻿@model ecomiks1.Models.Perfil
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Perfil</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomePerfil)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomePerfil)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PerfilID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

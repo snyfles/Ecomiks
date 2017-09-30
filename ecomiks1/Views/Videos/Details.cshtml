@@ -1,0 +1,58 @@
+﻿@model ecomiks1.Models.Video
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Video</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.videoNome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.videoNome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.videoUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.videoUrl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.videoDescricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.videoDescricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.videoCategoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.videoCategoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.videoAvaliacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.videoAvaliacao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.videoID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
